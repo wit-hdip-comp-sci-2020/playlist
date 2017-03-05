@@ -1,5 +1,8 @@
 package controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import models.Playlist;
 import models.Song;
 import play.Logger;
@@ -13,11 +16,23 @@ public class Dashboard extends Controller
     Song s1 = new Song("Piano Sonata No. 3", "Beethoven");
     Song s2 = new Song("Piano Sonata No. 7", "Beethoven");
     Song s3 = new Song("Piano Sonata No. 10", "Beethoven");
-    Playlist playlist = new Playlist("Beethoven Sonatas");
-    playlist.songs.add (s1);
-    playlist.songs.add (s2);
-    playlist.songs.add (s3);
+    Playlist p1 = new Playlist("Beethoven Sonatas");
+    p1.songs.add (s1);
+    p1.songs.add (s2);
+    p1.songs.add (s3);
     
-    render ("dashboard.html", playlist);
+    Song s4 = new Song("Piano Concerto No. 1", "Beethoven");
+    Song s5 = new Song("Piano Concerto No. 12", "Beethoven");
+    Song s6 = new Song("Piano Concerto No. 23", "Beethoven");
+    Playlist p2 = new Playlist("Beethoven Concertos");
+    p2.songs.add (s4);
+    p2.songs.add (s5);
+    p2.songs.add (s6);
+    
+    List<Playlist> playlists = new ArrayList<Playlist>();
+    playlists.add(p1);
+    playlists.add(p2);
+    
+    render ("dashboard.html", playlists);
   }
 }

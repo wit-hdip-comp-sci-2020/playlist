@@ -3,9 +3,11 @@
 
 #{menu id:"dashboard"/}
 
-<section class="ui segment">
-  <h2 class="ui header">
-    Beethoven Sonatas
-  </h2>
-  #{listsongs playlist:playlist/}
-</section>
+#{list items:playlists, as:'playlist'}
+  <section class="ui segment">
+    <h2 class="ui header">
+      ${playlist.title}
+    </h2>
+    #{listsongs playlist:playlist/}
+  </section>
+#{/list}
