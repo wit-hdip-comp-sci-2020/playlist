@@ -5,30 +5,16 @@
       <th>Artist</th>
     </tr>
   </thead>
-<tbody>
-  <tr>
-    <td>
-      Piano Sonata No. 3
-    </td>
-    <td>
-      Beethoven
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Piano Sonata No. 7
-    </td>
-    <td>
-      Beethoven
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Piano Sonata No. 10
-    </td>
-    <td>
-      Beethoven
-    </td>
-  </tr>
-</tbody>
+  <tbody>
+    #{list items:_playlist.songs, as:'song'}
+      <tr>
+        <td>
+          ${song.title}
+        </td>
+        <td>
+          ${song.artist}
+        </td>
+      </tr>
+    #{/list}
+  </tbody>
 </table>
