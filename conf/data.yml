@@ -1,0 +1,34 @@
+Song(s1):
+  title: Piano Sonata No. 3
+  artist: Beethoven
+Song(s2):
+  title: Piano Sonata No. 7
+  artist: Beethoven
+Song(s3):
+  title: Piano Sonata No. 10
+  artist: Beethoven
+  
+Song(s4):
+  title: Piano Concerto No. 27
+  artist: Beethoven
+Song(s5):
+  title: Piano Concertos No. 17
+  artist: Beethoven
+Song(s6):
+  title: Piano Concerto No. 10
+  artist: Beethoven
+    
+  
+Playlist(p1):
+  title: Bethoven Sonatas
+  songs:
+  - s1
+  - s2
+  - s3
+  
+Playlist(p2):
+  title: Bethoven Concertos
+  songs:
+  - s4
+  - s5
+  - s6  
