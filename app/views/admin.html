@@ -1,0 +1,39 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+
+#{menu id:"admin"/}
+
+  <section class="ui segment">
+  <h2 class="ui header">
+    All Known Songs in the Database:
+  </h2>
+  <table class="ui fixed table">
+    <thead>
+      <tr>
+        <th>ID </th>
+        <th>Song</th>
+        <th>Artist</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      #{list items:songs, as:'song'}
+        <tr>
+          <td>
+            ${song.id}
+          </td>
+          <td>
+            ${song.title}
+          </td>
+          <td>
+            ${song.artist}
+          </td>
+          <td>        
+            ${song.duration}
+          </td>        
+        </tr>
+      #{/list}
+    </tbody>
+  </table>
+</section>
+

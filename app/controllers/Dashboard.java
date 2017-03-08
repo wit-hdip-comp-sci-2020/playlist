@@ -10,8 +10,9 @@ import play.mvc.Controller;
 
 public class Dashboard extends Controller
 {
-  public static void index() {
-    Logger.info("Rendering Dashboard");
+  public static void index() 
+  {
+    Logger.info("Rendering Admin");
     
     List<Playlist> playlists = Playlist.findAll();
     render ("dashboard.html", playlists);
