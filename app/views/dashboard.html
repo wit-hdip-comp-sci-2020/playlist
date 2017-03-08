@@ -6,8 +6,9 @@
 #{list items:playlists, as:'playlist'}
   <section class="ui segment">
     <h2 class="ui header">
-      ${playlist.title}
+      ${playlist.title} 
     </h2>
+    Total Duration: ${playlist.duration}
     #{listsongs playlist:playlist/}
   </section>
 #{/list}
