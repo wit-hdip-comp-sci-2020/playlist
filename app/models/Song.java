@@ -1,6 +1,11 @@
 package models;
 
-public class Song
+import javax.persistence.Entity;
+
+import play.db.jpa.Model;
+
+@Entity
+public class Song extends Model
 {
   public String title;
   public String artist;
