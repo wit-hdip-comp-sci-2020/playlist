@@ -21,6 +21,12 @@ Song(s6):
   title: Piano Concerto No. 10
   artist: Beethoven
   duration: 12    
+Song(s7):
+    title: Opus 34 Six variations on a theme in F major
+    artict: Beethoven
+Song(s8):
+  title: Opus 120 Thirty-three variations on a waltz by Diabelli in C major
+  artist: Beethoven;
   
 Playlist(p1):
   title: Bethoven Sonatas
@@ -37,3 +43,11 @@ Playlist(p2):
   - s4
   - s5
   - s6  
+  
+Playlist(p3):
+  title: Beethoven Variations
+  duration: 26
+  songs:
+  - s7
+  - s8
+  
