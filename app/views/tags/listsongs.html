@@ -4,6 +4,7 @@
       <th>Song</th>
       <th>Artist</th>
       <th>Duration</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -17,7 +18,10 @@
         </td>
         <td>        
           ${song.duration}
-        </td>        
+        </td>      
+         <td>
+            <a href="/playlists/${_playlist.id}/deletesong/${song.id}" class="ui tiny red button">Delete Song</a>
+          </td>         
       </tr>
     #{/list}
   </tbody>

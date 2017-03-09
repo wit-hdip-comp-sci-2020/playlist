@@ -15,4 +15,15 @@ public class PlaylistCtrl extends Controller
     Logger.info ("Playlist id = " + id);
     render("playlist.html", playlist);
   }
+  
+  public static void deletesong (Long id, Long songid)
+  {
+    Playlist playlist = Playlist.findById(id);
+    Song song = Song.findById(songid);
+    Logger.info ("Removing" + song.title);
+    playlist.songs.remove(song);
+    playlist.save();
+    song.delete();
+    render("playlist.html", playlist);
+  }
 }

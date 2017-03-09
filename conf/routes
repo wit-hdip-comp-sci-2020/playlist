@@ -8,6 +8,7 @@ GET     /dashboard                              Dashboard.index
 GET     /about                                  About.index
 GET     /admin                                  Admin.index
 GET     /playlists/{id}                         PlaylistCtrl.index
+GET     /playlists/{id}/deletesong/{songid}     PlaylistCtrl.deleteSong
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
