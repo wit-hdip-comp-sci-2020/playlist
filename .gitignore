@@ -4,3 +4,5 @@ documentation
 tmp
 .classpath
 .project
+.idea
+playlist.iml
