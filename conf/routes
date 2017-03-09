@@ -7,6 +7,7 @@ GET     /                                       Start.index
 GET     /dashboard                              Dashboard.index
 GET     /about                                  About.index
 GET     /admin                                  Admin.index
+GET     /playlists/{id}                         PlaylistCtrl.index
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
