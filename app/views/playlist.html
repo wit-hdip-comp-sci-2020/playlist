@@ -7,24 +7,5 @@
   <h2 class="ui header">
     ${playlist.title}
   </h2>
-  <table class="ui table">
-    <thead>
-      <tr>
-        <th>Song</th>
-        <th>Artist</th>
-      </tr> 
-    </thead>
-    <tbody>
-    #{list items:playlist.songs, as:'song'}
-      <tr>
-        <td>
-          ${song.title}
-        </td>
-        <td>
-          ${song.artist}
-        </td>
-      </tr>
-    #{/list}
-    </tbody>
-  </table>
+  #{listsongs playlist:playlist /}
 </section>
