@@ -22,11 +22,11 @@ Song(s6):
   artist: Beethoven
   duration: 12    
 Song(s7):
-    title: Opus 34 Six variations on a theme in F major
-    artict: Beethoven
+  title: Opus 34 Six variations on a theme in F major
+  artist: Beethoven
 Song(s8):
   title: Opus 120 Thirty-three variations on a waltz by Diabelli in C major
-  artist: Beethoven;
+  artist: Beethoven
   
 Playlist(p1):
   title: Bethoven Sonatas
