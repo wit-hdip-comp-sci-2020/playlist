@@ -5,6 +5,8 @@
 # Home page
 GET     /                                       Start.index
 GET     /dashboard                              Dashboard.index
+GET     /dashboard/deleteplaylist/{id}          Dashboard.deletePlaylist
+
 GET     /about                                  About.index
 GET     /admin                                  Admin.index
 GET     /playlists/{id}                         PlaylistCtrl.index

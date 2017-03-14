@@ -9,6 +9,11 @@
       ${playlist.title} 
     </h2>
       <p> Total Duration: ${playlist.duration} </p>
-      <a href="/playlists/${playlist.id}"> View </a>
+      <a href="/playlists/${playlist.id}" class="ui icon button">
+        <i class="icon folder open"></i>
+      </a>
+      <a href="/dashboard/deleteplaylist/${playlist.id}" class="ui icon button">
+        <i class="icon trash"></i>
+      </a>
   </section>
 #{/list}
