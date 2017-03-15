@@ -25,4 +25,12 @@ public class Dashboard extends Controller
     playlist.delete();
     redirect ("/dashboard");
   }
+
+  public static void addPlaylist (String title)
+  {
+    Playlist playlist = new Playlist (title, 0);
+    Logger.info ("Adding a new playlist called " + title);
+    playlist.save();
+    redirect ("/dashboard");
+  }
 }
