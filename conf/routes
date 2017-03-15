@@ -12,6 +12,8 @@ GET     /admin                                  Admin.index
 GET     /playlists/{id}                         PlaylistCtrl.index
 GET     /playlists/{id}/deletesong/{songid}     PlaylistCtrl.deleteSong
 
+POST    /playlists/{id}/addsong                  PlaylistCtrl.addSong
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
