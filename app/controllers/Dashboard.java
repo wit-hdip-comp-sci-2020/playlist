@@ -3,6 +3,7 @@ package controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import models.Member;
 import models.Playlist;
 import models.Song;
 import play.Logger;
@@ -12,25 +13,30 @@ public class Dashboard extends Controller
 {
   public static void index() 
   {
-    Logger.info("Rendering Admin");
-    
-    List<Playlist> playlists = Playlist.findAll();
+    Logger.info("Rendering Dasboard");
+    Member member = Accounts.getLoggedInMember();
+    List<Playlist> playlists = member.playlists;
     render ("dashboard.html", playlists);
   }
 
   public static void deletePlaylist (Long id)
   {
+    Logger.info("Deleting a Playlist");
+    Member member = Accounts.getLoggedInMember();
     Playlist playlist = Playlist.findById(id);
-    Logger.info ("Removing" + playlist.title);
+    member.playlists.remove(playlist);
+    member.save();
     playlist.delete();
     redirect ("/dashboard");
   }
 
   public static void addPlaylist (String title)
   {
+    Logger.info("Adding a Playlist");
+    Member member = Accounts.getLoggedInMember();
     Playlist playlist = new Playlist (title, 0);
-    Logger.info ("Adding a new playlist called " + title);
-    playlist.save();
+    member.playlists.add(playlist);
+    member.save();
     redirect ("/dashboard");
   }
 }
