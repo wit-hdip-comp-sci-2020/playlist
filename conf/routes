@@ -4,6 +4,13 @@
 
 # Home page
 GET     /                                       Start.index
+
+GET    /signup                                  Accounts.signup
+GET    /login                                   Accounts.login
+POST   /register                                Accounts.register
+POST   /authenticate                            Accounts.authenticate
+GET    /logout                                  Accounts.logout
+
 GET     /dashboard                              Dashboard.index
 GET     /dashboard/deleteplaylist/{id}          Dashboard.deletePlaylist
 
