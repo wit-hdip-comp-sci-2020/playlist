@@ -14,8 +14,8 @@ public class PlaylistCtrl extends Controller
   {
     Playlist playlist = Playlist.findById(id);
     Logger.info ("Playlist id = " + id);
-    Song shortestSong = PlaylistAnalytics.getShortestSong(playlist.songs);
-    render("playlist.html", playlist, shortestSong);
+    playlist.shortestSongTitle = PlaylistAnalytics.getShortestSong(playlist.songs).title;
+    render("playlist.html", playlist);
   }
 
   public static void deletesong (Long id, Long songid)

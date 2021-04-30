@@ -17,6 +17,8 @@ public class Playlist extends Model
   public List<Song> songs = new ArrayList<Song>();
   public int duration;
 
+  public String shortestSongTitle;
+
   public Playlist(String title, int duration)
   {
     this.title = title;
