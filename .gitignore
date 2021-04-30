@@ -1,4 +1,6 @@
 .settings
+*.ipr
+*.iws
 eclipse
 documentation
 tmp
