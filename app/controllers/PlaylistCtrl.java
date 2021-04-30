@@ -6,6 +6,7 @@ import models.Playlist;
 import models.Song;
 import play.Logger;
 import play.mvc.Controller;
+import utils.PlaylistAnalytics;
 
 public class PlaylistCtrl extends Controller
 {
@@ -13,7 +14,8 @@ public class PlaylistCtrl extends Controller
   {
     Playlist playlist = Playlist.findById(id);
     Logger.info ("Playlist id = " + id);
-    render("playlist.html", playlist);
+    Song shortestSong = PlaylistAnalytics.getShortestSong(playlist.songs);
+    render("playlist.html", playlist, shortestSong);
   }
 
   public static void deletesong (Long id, Long songid)
